@@ -1,0 +1,247 @@
+@import "./../../../styles.scss";
+
+.contact {
+  margin: auto;
+  padding: 140px 0 40px 200px;
+  max-width: 1640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  @media screen and (max-width: 980px) {
+    gap: 80px;
+    padding: 140px 40px;
+    justify-content: flex-start;
+  }
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    margin-bottom: 40px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 1000px;
+      height: 4px;
+      bottom: 50%;
+      left: -1040px;
+      background-color: $prim2;
+    }
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 40px;
+  max-width: 470px;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 180px;
+  @media screen and (max-width: 1200px) {
+    gap: 80px;
+  }
+  @media screen and (max-width: 980px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.form-section {
+  width: 45%;
+  form {
+    display: flex;
+    flex-direction: column;
+    span {
+      padding-top: 4px;
+      padding-bottom: 24px;
+      color: red;
+    }
+    .input-text {
+      position: relative;
+      border: solid 1px $prim2;
+      border-radius: 10px;
+      background-color: $bg-color;
+      width: 85%;
+      height: 50px;
+      color: white;
+      padding-left: 24px;
+      font-family: "Poppins", sans-serif;
+      &::placeholder {
+        color: white;
+        font-size: 16px;
+      }
+      &:focus {
+        outline: none;
+        border: solid 1px $prim1;
+      }
+      @media screen and (max-width: 980px) {
+        width: 100%;
+      }
+    }
+
+    .input-wrapper-good {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 15px;
+        right: -5px;
+        width: 20px;
+        height: 20px;
+        background-image: url("./../../../assets/images/good_input.png");
+        background-size: cover;
+        pointer-events: none;
+      }
+      .input-text {
+        border: 1px solid $prim1;
+      }
+      textarea {
+        border: 1px solid $prim1;
+      }
+    }
+
+    .input-wrapper-bad {
+      position: relative;
+      .input-text {
+        border: 1px solid red;
+      }
+      textarea {
+        border: 1px solid red;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 15px;
+        right: -5px;
+        width: 20px;
+        height: 20px;
+        background-image: url("./../../../assets/images/bad_input.png");
+        background-size: cover;
+        pointer-events: none;
+      }
+    }
+
+    textarea {
+      width: 85%;
+      height: 200px;
+      background-color: $bg-color;
+      border: solid 1px $prim2;
+      border-radius: 10px;
+      background-color: $bg-color;
+      font-family: "Poppins", sans-serif;
+      padding-top: 16px;
+      padding-left: 24px;
+      color: white;
+      font-size: 16px;
+      resize: vertical;
+      min-height: 50px;
+      &::placeholder {
+        color: white;
+      }
+      &:focus {
+        outline: none;
+        border: solid 1px $prim1;
+      }
+      @media screen and (max-width: 980px) {
+        width: 100%;
+      }
+    }
+    input[type="submit"] {
+      align-self: center;
+    }
+    .btn-disabled {
+      background-color: #b6b6b6;
+      cursor: not-allowed;
+      transform: unset;
+    }
+    .form-margin {
+      margin-bottom: 24px;
+    }
+  }
+  @media screen and (max-width: 980px) {
+    width: 80%;
+  }
+}
+
+.check-box-wrapper {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: relative;
+  &:hover {
+    cursor: pointer;
+    background-color: #183771;
+  }
+  &:hover .checkbox {
+    cursor: pointer;
+    background-color: #183771;
+  }
+  .checkbox {
+    appearance: none;
+    margin: 0;
+    background-color: $bg-color;
+    width: 18px;
+    height: 18px;
+    border: 3px solid $prim1;
+    border-radius: 0.15em;
+    &:checked::after {
+      content: "\2713";
+      position: absolute;
+      bottom: 5px;
+      left: 7px;
+      visibility: visible;
+      text-align: center;
+      line-height: 16px;
+      font-size: 14px;
+      font-weight: 900;
+      color: $prim1;
+    }
+  }
+}
+
+.privacy-policy {
+  display: flex;
+  gap: 8px;
+  a {
+    color: $prim2;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 0.5px;
+    }
+  }
+  label {
+    padding-bottom: 24px;
+  }
+}
+
+.button-wrapper{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  .mail-sent-info {
+    position: absolute;
+    bottom: 256px;
+    background-color: $prim1;
+    color: green;
+    padding: 8px;
+    border: 1px solid rgb(1, 94, 1);
+    border-radius: 8px;
+  }
+}
+

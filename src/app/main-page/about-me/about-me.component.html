@@ -1,0 +1,18 @@
+<div id="about_me" class="about-me">
+    <div class="text-part" data-aos="zoom-in-right" data-aos-duration="1600">
+        <h1>{{'about-me.title' | translate}}</h1>
+        <p> {{'about-me.description' | translate}}</p>
+        @for (item of someInfo; track $index) {
+            <div class="some-info">
+                <img src="./../../../assets/images/{{item.image}}" alt="">
+                <p>{{item.info}}</p>
+            </div>
+        }
+    </div>
+    <div class="img-part" data-aos="zoom-in-left" data-aos-duration="1600">
+        <div class="img-wrapper">
+            <img src="./assets/images/profile-small.png" alt="">
+        </div>
+        <div class="line"></div>
+    </div>
+</div>

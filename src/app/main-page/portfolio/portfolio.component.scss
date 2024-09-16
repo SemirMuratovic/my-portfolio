@@ -1,0 +1,58 @@
+@import "./../../../styles.scss";
+
+.portfolio {
+  background-image: url("./../../../assets/images/32\ Purple\ shadow\ portfolio.png");
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position-x: 60vw;
+  background-position-y: 80vh;
+  margin: auto;
+  padding: 140px 0 40px 200px;
+  max-width: 1640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  @media screen and (max-width: 980px) {
+    padding-left: 100px;
+    padding-right: 100px;
+    background-size: 50%;
+  }
+  @media screen and (max-width: 520px) {
+    padding: 100px 40px;
+    background-size: 70%;
+  }
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    margin-bottom: 40px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100px;
+      height: 4px;
+      bottom: 50%;
+      left: -140px;
+      background-color: $prim2;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 800px;
+      height: 4px;
+      bottom: 50%;
+      right: -840px;
+      background-color: $prim2;
+    }
+  }
+  p {
+    color: white;
+  }
+}

@@ -1,0 +1,155 @@
+@import "./../../../styles.scss";
+
+.my-skills {
+  background-image: url("./../../../assets/images/54.\ Green\ shadow\ 3\ \(skills\ and\ portfolio\ section\).png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: -8vw;
+  background-position-y: 0;
+  margin: auto;
+  padding: 140px 0 40px 200px;
+  max-width: 1640px;
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  color: white;
+  overflow: hidden;
+  @media screen and (max-width: 1450px) {
+    background-size: 50vw;
+  }
+  @media screen and (max-width: 1200px) {
+    flex-direction: column-reverse;
+    align-items: end;
+    background-position-y: 40vh;
+    background-position-x: -20vw;
+  }
+  @media screen and (max-width: 980px) {
+    padding-left: 100px;
+    padding-right: 100px;
+    background-size: 70vw;
+    background-position-y: 100vh;
+  }
+  @media screen and (max-width: 520px) {
+    padding: 100px 40px;
+    background-size: 100vw;
+  }
+}
+
+.skills-icons {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  row-gap: 60px;
+  column-gap: 120px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  @media screen and (max-width: 980px) {
+    justify-content: center;
+  }
+  @media screen and (max-width: 840px) {
+    row-gap: 30px;
+    column-gap: 60px;
+  }
+  @media screen and (max-width: 520px) {
+    row-gap: 24px;
+    column-gap: 24px;
+  }
+}
+
+.single-icon {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  > p {
+    font-weight: 700;
+  }
+  @media screen and (max-width: 520px) {
+    width: 70px;
+    height: 120px;
+  }
+}
+
+.spec-color {
+  color: $prim2;
+  position: relative;
+  > svg {
+    width: 60px;
+    height: 60px;
+    path {
+      fill: $prim2;
+    }
+  }
+  &:hover {
+    color: white;
+    > svg {
+      path {
+        fill: white;
+      }
+    }
+  }
+  &:hover::after {
+    content: url(./../../../assets/images/Group\ 18.png);
+    position: absolute;
+    top: -120px;
+    left: 20px;
+  }
+}
+
+.fall-effect {
+  &:hover {
+    > img {
+      animation: fall 0.5s ease-out;
+    }
+  }
+  @keyframes fall {
+    from {
+      transform: translateY(-24px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+}
+
+.my-skills-text {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 40px;
+  max-width: 470px;
+  min-width: 470px;
+  padding-right: 100px;
+  .btn-prim {
+    transform-origin: right center;
+  }
+  @media screen and (max-width: 980px) {
+    align-items: center;
+    padding: 0;
+    min-width: auto;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 24px;
+  > h1 {
+    margin-bottom: 40px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 200px;
+      height: 4px;
+      bottom: 50%;
+      right: -240px;
+      background-color: $prim2;
+    }
+  }
+}

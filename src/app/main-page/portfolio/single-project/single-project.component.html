@@ -1,0 +1,15 @@
+<div class="single-project" data-aos="flip-left" data-aos-duration="1600" [ngStyle]="{'flex-direction': getFlexDirection(singleProjectIndex)}">
+    <img src="assets/images/{{singleProject.projectImage}}" alt="">
+    <div class="project-info"
+        [ngStyle]="{'align-items': (singleProjectIndex % 2 == 0) ? 'flex-start' : 'flex-end', 'text-align': (singleProjectIndex % 2 == 0) ? 'start' : 'end'}">
+        <h3>{{singleProject.projectName}}</h3>
+        <div class="skills-wrapper">
+            <h4 *ngFor="let skill of singleProject.skills; let last = last">{{skill}} <span *ngIf="!last">|</span></h4>
+        </div>
+        <p>{{singleProject.description}}</p>
+        <div class="button-wrapper">
+            <a class="btn-prim" href="{{singleProject.liveTestLink}}" target="_blank">Live test</a>
+            <a class="btn-scnd" href="{{singleProject.gitHubLink}}" target="_blank">Github</a>
+        </div>
+    </div>
+</div>

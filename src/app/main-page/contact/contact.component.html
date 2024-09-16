@@ -1,0 +1,75 @@
+<div id="contact" class="contact">
+  <div class="headline">
+    <h1>{{'contact.title' | translate}}</h1>
+  </div>
+  <div class="form-wrapper">
+    <div class="text" data-aos="zoom-in-right" data-aos-duration="1600">
+      <h3>{{'contact.section-1' | translate}}</h3>
+      <span>
+        <p>
+          {{'contact.section-2' | translate}}
+        </p>
+      </span>
+      <span>
+        <p>{{'contact.section-3' | translate}} <b>{{'contact.section-4' | translate}}</b></p>
+      </span>
+    </div>
+    <div class="form-section" data-aos="zoom-in-left" data-aos-duration="1600">
+      <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <div [ngClass]="{
+          'input-wrapper-good': name.valid,
+          'input-wrapper-bad': name.invalid && (name.touched || submitted)
+        }">
+          <input class="input-text" type="text" #name="ngModel" [(ngModel)]="contactData.name" name="name" required
+            placeholder="{{'contact.name-field' | translate}}" [ngClass]="{
+              'form-margin': !(name.invalid && (name.touched || submitted))
+            }" />
+        </div>
+        <span *ngIf="name.invalid && (name.touched || submitted)">{{'contact.errors.name' | translate}}</span>
+        <div [ngClass]="{
+          'input-wrapper-good': eMail.valid,
+          'input-wrapper-bad': eMail.invalid && (eMail.touched || submitted)
+        }">
+          <input class="input-text" type="email" #eMail="ngModel" [(ngModel)]="contactData.email" name="email" required
+            placeholder="{{'contact.e-mail-field' | translate}}"
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" [ngClass]="{
+              'form-margin': !(eMail.invalid && (eMail.touched || submitted))
+            }" />
+        </div>
+        <span *ngIf="eMail.invalid && (eMail.touched || submitted)">{{'contact.errors.email' | translate}}</span>
+        <div [ngClass]="{
+          'input-wrapper-good': message.valid,
+          'input-wrapper-bad': message.invalid && (message.touched || submitted)
+        }">
+          <textarea #message="ngModel" type="text" [(ngModel)]="contactData.message" name="message"
+            placeholder="{{'contact.message-field' | translate}}" required [ngClass]="{
+              'form-margin': !(
+                message.invalid &&
+                (message.touched || submitted)
+              )
+            }"></textarea>
+        </div>
+        <span *ngIf="message.invalid && (message.touched || submitted)">{{'contact.errors.message' | translate}}</span>
+        <div class="privacy-policy">
+          <div class="check-box-wrapper">
+            <input #checkbox="ngModel" (ngModelChange)="onPolicyChange($event)" [(ngModel)]="policyAccepted"
+              type="checkbox" name="privacy" class="checkbox" required />
+          </div>
+          <label for="accept_policy">{{'contact.checkbox.section-1' | translate}} <a
+              href="privacy-policy">{{'contact.checkbox.section-2' | translate}}</a> {{'contact.checkbox.section-3' |
+            translate}}</label>
+        </div>
+        <span *ngIf="showPrivacyError || (!policyAccepted && submitted)">{{'contact.errors.privacy-policy' |
+          translate}}</span>
+        <div class="button-wrapper">
+          <input class="btn-prim" type="submit" value="{{'contact.submit-button' | translate}}" [ngClass]="{
+            'btn-disabled': !contactForm.form.valid || !policyAccepted
+          }" />
+          <div class="mail-sent-info" *ngIf="mailSent">
+            <p>{{'contact.email-sent' | translate}}</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

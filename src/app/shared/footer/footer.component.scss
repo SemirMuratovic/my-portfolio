@@ -1,0 +1,88 @@
+@import "./../../../styles.scss";
+
+footer {
+  background-color: $bg-color;
+  border-top: solid 4px $prim1;
+  max-width: 1640px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 150px 100px;
+  margin: auto;
+  p {
+    font-size: 23px;
+    text-align: center;
+  }
+  @media screen and (max-width: 980px) {
+    padding: 100px;
+    flex-direction: column;
+    gap: 24px;
+  }
+  @media screen and (max-width: 520px) {
+    padding:40px;
+  }
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  a {
+    text-decoration: none;
+    color: white;
+    img {
+      height: 80px;
+      &:hover {
+        cursor: pointer;
+        filter: drop-shadow(0px 0px 2px $prim1);
+      }
+    }
+  }
+}
+
+.legal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.impressum {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: $prim1;
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform 0.3s ease;
+  }
+  &:hover::before {
+    transform: scaleX(1);
+    color: $prim1;
+    visibility: visible;
+  }
+}
+
+.footer-social {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 32px;
+  bottom: 10%;
+  gap: 32px;
+}
+
+.social-image {
+  transition: transform 0.1s ease;
+  transform-origin: right center;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.4);
+  }
+}

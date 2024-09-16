@@ -1,0 +1,87 @@
+{
+  "header": {
+    "about": "About me",
+    "skills": "Skills",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "footer": {
+    "imprint": "Imprint"
+  },
+  "landing-page": {
+    "title": "I am",
+    "job": "FRONTEND DEVELOPER",
+    "talk": "Let's talk",
+    "scroll": "Scroll down"
+  },
+  "about-me": {
+    "title": "About me",
+    "description": "Hi, I'm a German-speaking Junior Frontend Developer based near Munich. Inspired by the boundless potential of the tech industry, I am dedicated to designing visually appealing and highly intuitive websites and applications.",
+    "section-1": "I am adaptable to various working environments and can collaborate efficiently both on-site in Munich and remotely.",
+    "section-2": "I love to learn new skills and always seeking new challenges to continually enhance my knowledge and expertise.",
+    "section-3": "In my field, programming goes beyond writing code; it's a creative approach to solving problems. I take pride in transforming complex technical challenges into clear, user-centric solutions. This way, I support you in achieving your objectives and bringing your ideas to life."
+  },
+  "my-skills": {
+    "title": "My skills",
+    "section-1": "I have developed expertise in creating projects using a variety of frontend technologies and methodologies.",
+    "section-2": "Looking for",
+    "section-3": "another skill",
+    "section-4": "Don't hesitate to get in touch. I'm eager to build on my existing knowledge.",
+    "button": "Get in touch"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "section": "Check out some of my work here - interact with the projects to experience my skills firsthand.",
+    "project-1": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "project-2": "A simple Jump N Run Game based on object oriented Programming. Help Pepe to collect coins and fight against chickens.",
+    "project-3": "PokeAPI-powered Pokemon-Database to get all the information you need about your favorite little monsters!"
+  },
+  "contact": {
+    "title": "Contact",
+    "section-1": "Got a problem to solve?",
+    "section-2": "Reach out using this form. I’m eager to hear your ideas and contribute to your projects with my expertise.",
+    "section-3": "Need a Frontend developer?",
+    "section-4": "Contact me!",
+    "name-field": "Your name",
+    "e-mail-field": "Your email",
+    "message-field": "Your message",
+    "checkbox": {
+      "section-1": "I've read the",
+      "section-2": "privacy policy",
+      "section-3": "and agree to the processing of my data as outlined."
+    },
+    "errors": {
+      "name": "Please enter your name!",
+      "email": "Please enter a valid email address!",
+      "message": "Your message is empty!",
+      "privacy-policy": "Please check the privacy policy!"
+    },
+    "submit-button": "Send message",
+    "email-sent": "Your Mail was sent. Thank you!"
+  },
+  "imprint": {
+    "title": "Imprint",
+    "right": "Information in accordance with § 5 of the TMG",
+    "contact": "Contact",
+    "phone": "Phone",
+    "source": "Source"
+  },
+  "privacy-policy": {
+    "title": "Privacy policy",
+    "date": "Date: 08/17/2024",
+    "content": {
+      "title": "Table of Contents",
+      "content-1": "Data Controller",
+      "content-2": "Overview of Processing Activities",
+      "content-3": "Relevant Legal Bases",
+      "content-4": "Security Measures",
+      "content-5": "General Information on Data Storage and Deletion",
+      "content-6": "Rights of the Data Subjects",
+      "content-7": "Provision of the Online Offering and Web Hosting",
+      "content-8": "Contact and Inquiry Management"
+    },
+    "controller": {
+      
+    }
+  }
+}

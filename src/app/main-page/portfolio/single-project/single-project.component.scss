@@ -1,0 +1,58 @@
+@import "./../../../../styles.scss";
+
+.single-project {
+  padding: 80px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 180px;
+  overflow: hidden;
+  img {
+    width: 440px;
+  }
+  @media screen and (max-width: 980px) {
+    gap: 80px;
+    padding: 40px 0;
+  }
+  @media screen and (max-width: 980px) {
+    img {
+      width: 320px;
+    }
+  }
+}
+
+.project-info {
+  max-width: 512px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 24px;
+  text-align: end;
+  h3 {
+    color: $prim2;
+  }
+  .skills-wrapper {
+    display: flex;
+    gap: 4px;
+  }
+}
+
+.button-wrapper {
+  display: flex;
+  gap: 100px;
+  .btn-prim {
+    background-color: $prim2;
+    transition: unset;
+    transform-origin: unset;
+    &:hover {
+      background-color: $prim1;
+      cursor: pointer;
+      transform: unset;
+    }
+  }
+  @media screen and (max-width: 980px) {
+    gap: 56px;
+  }
+}

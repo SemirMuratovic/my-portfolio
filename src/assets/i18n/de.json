@@ -1,0 +1,69 @@
+{
+  "header": {
+    "about": "Über mich",
+    "skills": "Meine Fähigkeiten",
+    "portfolio": "Portfolio",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "imprint": "Impressum"
+  },
+  "landing-page": {
+    "title": "Ich bin",
+    "job": "FRONTEND ENTWICKLER",
+    "talk": "Reden wir",
+    "scroll": "Runterscrollen"
+  },
+  "about-me": {
+    "title": "Über mich",
+    "description": "Hallo, ich bin ein deutschsprachiger Junior Frontend-Entwickler aus der Nähe von München. Inspiriert vom grenzenlosen Potenzial der IT-Branche widme ich mich der Gestaltung von visuell ansprechenden und äußerst intuitiven Websites und Anwendungen.",
+    "section-1": "Ich bin anpassungsfähig an verschiedene Arbeitsumgebungen und kann sowohl vor Ort in München als auch remote effektiv zusammenarbeiten.",
+    "section-2": "Ich liebe es neues zu lernen und bin stets auf der Suche nach neuen Herausforderungen, um mein Wissen und meine Fähigkeiten kontinuierlich zu erweitern.",
+    "section-3": "In meinem Beruf geht Programmierung über das Schreiben von Code hinaus; es ist ein kreativer Ansatz zur Problemlösung. Ich bin stolz darauf, komplexe technische Herausforderungen in klare, benutzerorientierte Lösungen zu verwandeln. So helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Ideen zum Leben zu erwecken."
+  },
+  "my-skills": {
+    "title": "Meine Fähigkeiten",
+    "section-1": "Ich habe mir Fachwissen in der Umsetzung von Projekten mit einer Vielzahl von Frontend-Technologien und -Methoden angeeignet.",
+    "section-2": "Suchen Sie",
+    "section-3": "eine andere Fähigkeit",
+    "section-4": "Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein bestehendes Wissen weiter auszubauen.",
+    "button": "Kontakt aufnehmen"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "section": "Sehen Sie sich hier eine Auswahl meiner Arbeiten an – interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu erleben.",
+    "project-1": "Aufgabenmanager nach dem Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionalität und weisen Sie Benutzer und Kategorien zu.",
+    "project-2": "Ein einfaches Jump-and-Run-Spiel, das auf objektorientierter Programmierung basiert. Hilf Pepe, Münzen zu sammeln und gegen Hühner zu kämpfen.",
+    "project-3": "Eine von der PokeAPI unterstützte Pokémon-Datenbank, um alle Informationen über Ihre Lieblingsmonster zu erhalten!"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "section-1": "Haben sie ein Problem das gelöst werden soll?",
+    "section-2": "Kontaktieren Sie mich über dieses Formular. Ich freue mich darauf, Ihre Ideen zu hören und mit meinem Fachwissen zu Ihren Projekten beizutragen.",
+    "section-3": "Brauchen Sie einen Junior Frontend Entwickler?",
+    "section-4": "Kontaktieren Sie mich!",
+    "name-field": "Ihr Name",
+    "e-mail-field": "Ihre E-Mail",
+    "message-field": "Ihre Nachricht",
+    "checkbox": {
+      "section-1": "Ich habe die",
+      "section-2": "Datenschutzerklärung",
+      "section-3": "gelesen und bin einverstanden, dass meine Daten dementsprechend bearbeitet werden."
+    },
+    "errors": {
+      "name": "Bitte geben sie Ihren Namen ein!",
+      "email": "Bitte geben Sie eine gültige E-Mail Adresse ein!",
+      "message": "Ihre Nachricht ist leer!",
+      "privacy-policy": "Bestätigen si bitte die Datenschutzerklärung!"
+    },
+    "submit-button": "Nachricht senden",
+    "email-sent": "Ihre E-Mail wurde versendet. Danke!"
+  },
+  "imprint": {
+    "title": "Impressum",
+    "right": "Angaben gemäß § 5 TMG",
+    "contact": "Kontakt",
+    "phone": "Telefon",
+    "source": "Quelle"
+  }
+}

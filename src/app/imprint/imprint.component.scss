@@ -1,0 +1,33 @@
+@import "./../../styles.scss";
+
+.imprint {
+  background-color: $bg-color;
+  max-width: 1640px;
+  padding: 80px 100px;
+  margin: auto;
+  h2 {
+    color: white;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      color: $prim1;
+    }
+  }
+  .arrow {
+    content: url("./../../assets/images/arrow_white.png");
+    rotate: -90deg;
+    width: 50px;
+    height: 50px;
+    &:hover {
+      content: url("./../../assets/images/arrow_green.png");
+      scale: 1.2;
+    }
+  }
+  @media screen and (max-width: 520px) {
+    padding: 40px;
+  }
+}
