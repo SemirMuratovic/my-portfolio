@@ -45,10 +45,10 @@ export class HeaderComponent {
     ) {
       this.router.navigateByUrl('/#' + elementId);
     } else {
-      this.scrollToElement(event, elementId)
+      this.scrollToElement(event, elementId);
     }
   }
-  
+
   scrollToElement(event: Event, elementId: string) {
     event.preventDefault();
     this.scrollService.setLinkClick(true);
@@ -65,6 +65,10 @@ export class HeaderComponent {
     this.currentLang = this.currentLang === 'en' ? 'de' : 'en';
     this.translate.use(this.currentLang);
     localStorage.setItem('currentLanguage', this.currentLang);
+    const currentUrl = window.location.href;
+    if (currentUrl.includes('/privacy-policy')) {
+      window.location.reload();
+    }
   }
 
   menu() {
