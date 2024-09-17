@@ -1,9 +1,12 @@
-<div class="portfolio" id="portfolio">
-    <div class="headline">
-        <h1>Portfolio</h1>
-        <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+<section>
+    <img class="background" src="./../../../assets/images/32 Purple shadow portfolio.png" alt="">
+    <div class="portfolio" id="portfolio">
+        <div class="headline">
+            <h1>Portfolio</h1>
+            <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+        </div>
+        @for (singleProject of myProjects; track $index) {
+        <app-single-project [singleProject]="singleProject" [singleProjectIndex]="$index"></app-single-project>
+        }
     </div>
-    @for (singleProject of myProjects; track $index) {
-    <app-single-project [singleProject]="singleProject" [singleProjectIndex]="$index"></app-single-project>
-    }
-</div>
+</section>

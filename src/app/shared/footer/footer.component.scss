@@ -1,8 +1,12 @@
 @import "./../../../styles.scss";
 
+section {
+  width: 100%;
+  border-top: solid 4px $prim1;
+}
+
 footer {
   background-color: $bg-color;
-  border-top: solid 4px $prim1;
   max-width: 1640px;
   display: flex;
   justify-content: space-between;

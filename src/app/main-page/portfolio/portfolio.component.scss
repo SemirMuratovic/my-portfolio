@@ -1,11 +1,23 @@
 @import "./../../../styles.scss";
 
+section {
+  position: relative;
+  margin: 0;
+}
+
+.background {
+  position: absolute;
+  z-index: -1;
+  top: 32vh;
+  right: -16vw;
+  @media screen and (max-width: 980px) {
+    max-width: 80%;
+    top: 24vh;
+    right: -50vw;
+  }
+}
+
 .portfolio {
-  background-image: url("./../../../assets/images/32\ Purple\ shadow\ portfolio.png");
-  background-repeat: no-repeat;
-  background-size: 40%;
-  background-position-x: 60vw;
-  background-position-y: 80vh;
   margin: auto;
   padding: 140px 0 40px 200px;
   max-width: 1640px;
@@ -16,11 +28,9 @@
   @media screen and (max-width: 980px) {
     padding-left: 100px;
     padding-right: 100px;
-    background-size: 50%;
   }
   @media screen and (max-width: 520px) {
     padding: 100px 40px;
-    background-size: 70%;
   }
 }
 

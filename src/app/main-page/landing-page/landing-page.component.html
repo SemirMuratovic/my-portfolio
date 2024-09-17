@@ -1,23 +1,27 @@
-<div class="landing-page">
-    <div class="main-info-wrapper">
-        <div class="main-info">
-            <p>{{'landing-page.title' | translate}}</p>
-            <div class="name">
-                <h1>Semir Muratovic</h1>
-                <h2>{{'landing-page.job' | translate}}</h2>
+<section>
+    <img class="background" src="./assets/images/28. Hero Background.png" alt="">
+    <div class="landing-page">
+        <div class="main-info-wrapper">
+            <div class="main-info">
+                <p>{{'landing-page.title' | translate}}</p>
+                <div class="name">
+                    <h1>Semir Muratovic</h1>
+                    <h2>{{'landing-page.job' | translate}}</h2>
+                </div>
             </div>
+            <a href="#contact" class="btn-prim">{{'landing-page.talk' | translate}}</a>
         </div>
-        <a href="#contact" class="btn-prim">{{'landing-page.talk' | translate}}</a>
-    </div>
 
-    <div class="main-contact">
-        @for (item of social; track $index) {
-        <a href="{{item.link}}" target="{{item.target}}"><img class="social-image" src="./assets/images/{{item.image}}.png" alt=""></a>
-        }
-        <a href="mailto:">semir.muratovic1990&#64;hotmail.com</a>
-    </div>
+        <div class="main-contact">
+            @for (item of social; track $index) {
+            <a href="{{item.link}}" target="{{item.target}}"><img class="social-image"
+                    src="./assets/images/{{item.image}}.png" alt=""></a>
+            }
+            <a class="mail" href="mailto:">semir.muratovic1990&#64;hotmail.com</a>
+        </div>
 
-    <div class="scroll-down">
-        <p>{{'landing-page.scroll' | translate}}</p>
+        <div class="scroll-down">
+            <p>{{'landing-page.scroll' | translate}}</p>
+        </div>
     </div>
-</div>
+</section>

@@ -1,14 +1,17 @@
-<footer>
-  <div class="footer-logo">
-    <a href="#"><img src="./assets/images/logo-dark.png" alt="" /></a>
-  </div>
-  <div class="legal">
-    <p>© Semir Muratovic 2024</p>
-    <a class="impressum" href="imprint">{{'footer.imprint' | translate}}</a>
-  </div>
-  <div class="footer-social">
-    @for (item of social; track $index) {
-      <a href="{{item.link}}" target="{{item.target}}"><img class="social-image" src="./assets/images/{{item.image}}.png" alt=""></a>
-    }
-  </div>
-</footer>
+<section>
+  <footer>
+    <div class="footer-logo">
+      <a href="#"><img src="./assets/images/logo-dark.png" alt="" /></a>
+    </div>
+    <div class="legal">
+      <p>© Semir Muratovic 2024</p>
+      <a class="impressum" href="imprint">{{'footer.imprint' | translate}}</a>
+    </div>
+    <div class="footer-social">
+      @for (item of social; track $index) {
+      <a href="{{item.link}}" target="{{item.target}}"><img class="social-image"
+          src="./assets/images/{{item.image}}.png" alt=""></a>
+      }
+    </div>
+  </footer>
+</section>
