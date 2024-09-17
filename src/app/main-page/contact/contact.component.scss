@@ -2,7 +2,7 @@
 
 .contact {
   margin: auto;
-  padding: 140px 0 40px 200px;
+  padding: 140px 0 140px 200px;
   max-width: 1640px;
   display: flex;
   flex-direction: column;
@@ -242,6 +242,21 @@
     padding: 8px;
     border: 1px solid rgb(1, 94, 1);
     border-radius: 8px;
+  }
+}
+
+.up-btn {
+  position: fixed;
+  bottom: -60px;
+  right: 32px;
+  &:hover {
+    cursor: pointer;
+    rect{
+      stroke: $prim1;
+    }
+    path{
+      fill: $prim1;
+    }
   }
 }
 
