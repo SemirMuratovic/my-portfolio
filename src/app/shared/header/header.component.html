@@ -1,13 +1,13 @@
 <header>
     <a href="/"><img src="./assets/images/logo-dark.png" alt=""></a>
-    <div class="nav-bar" *ngIf="showNavBar">
+    <div class="nav-bar">
         <img (click)="switchLanguage()"
             [src]="currentLang === 'en' ? './assets/images/german.png' : './assets/images/english.png'" alt="">
             <img (click)="menu()" class="mobile-menu" src="./assets/images/burger.png" alt="" #menuIcon>
         <div class="nav-bar-links">
-            <a href="#about_me" (click)="scrollToElement($event, 'about_me')">{{ 'header.about' | translate }}</a>
-            <a href="#my_skills" (click)="scrollToElement($event, 'my_skills')">{{ 'header.skills' | translate }}</a>
-            <a href="#portfolio" (click)="scrollToElement($event, 'portfolio')">{{ 'header.portfolio' | translate }}</a>
+            <a href="#about_me" (click)="navigateTo($event, 'about_me')">{{ 'header.about' | translate }}</a>
+            <a href="#my_skills" (click)="navigateTo($event, 'my_skills')">{{ 'header.skills' | translate }}</a>
+            <a href="#portfolio" (click)="navigateTo($event, 'portfolio')">{{ 'header.portfolio' | translate }}</a>
         </div>
     </div>
     <div class="menu" #openedMenu>

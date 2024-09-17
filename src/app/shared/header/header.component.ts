@@ -1,4 +1,10 @@
-import { Component, EventEmitter, Output, ViewChild, ElementRef } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Output,
+  ViewChild,
+  ElementRef,
+} from '@angular/core';
 import { ScrollService } from '../services/scroll.service';
 import { Router, NavigationEnd } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -20,7 +26,6 @@ export class HeaderComponent {
   ) {}
 
   currentLang = 'en';
-  showNavBar: boolean = true;
   menuOpen = false;
   @ViewChild('openedMenu') openedMenu!: ElementRef;
   @ViewChild('menuIcon') menuIcon!: ElementRef;
@@ -29,18 +34,21 @@ export class HeaderComponent {
     const savedLanguage = localStorage.getItem('currentLanguage');
     this.currentLang = savedLanguage ? savedLanguage : 'en';
     this.translate.use(this.currentLang);
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        const currentUrl = event.urlAfterRedirects;
-        this.showNavBar = !(
-          currentUrl.includes('/imprint') ||
-          currentUrl.includes('/privacy-policy') ||
-          currentUrl.includes('/datenschutz')
-        );
-      }
-    });
   }
 
+  navigateTo(event: Event, elementId: string) {
+    const currentUrl = window.location.href;
+    if (
+      currentUrl.includes('/imprint') ||
+      currentUrl.includes('/privacy-policy') ||
+      currentUrl.includes('/datenschutz')
+    ) {
+      this.router.navigateByUrl('/#' + elementId);
+    } else {
+      this.scrollToElement(event, elementId)
+    }
+  }
+  
   scrollToElement(event: Event, elementId: string) {
     event.preventDefault();
     this.scrollService.setLinkClick(true);
@@ -67,7 +75,6 @@ export class HeaderComponent {
     }
   }
 
-
   open() {
     this.menuOpen = true;
     this.openedMenu.nativeElement.style.display = 'flex';
@@ -75,7 +82,6 @@ export class HeaderComponent {
     this.menuIcon.nativeElement.src = './assets/images/burger-close.png';
     document.body.style.overflowY = 'hidden';
   }
-
 
   closed() {
     this.menuOpen = false;

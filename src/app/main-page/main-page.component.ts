@@ -61,7 +61,7 @@ export class MainPageComponent implements AfterViewInit, OnDestroy {
     if (this.isLinkClick) {
       return;
     }
-
+    
     const sectionIds = ['about_me', 'my_skills', 'portfolio'];
     const contactSectionId = 'contact';
     const offsets = sectionIds.map((id) => {
