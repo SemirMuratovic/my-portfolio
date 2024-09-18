@@ -57,6 +57,7 @@ h1 {
   @media screen and (max-width: 520px) {
     font-size: 45px;
     line-height: 50px;
+    word-wrap: break-word;
   }
 }
 
@@ -72,6 +73,7 @@ h2 {
   @media screen and (max-width: 520px) {
     font-size: 36px;
     line-height: 42px;
+    word-wrap: break-word;
   }
 }
 
