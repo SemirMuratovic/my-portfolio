@@ -1,19 +1,46 @@
 <header>
-    <a href="/"><img src="./assets/images/logo-dark.png" alt=""></a>
-    <div class="nav-bar">
-        <img (click)="switchLanguage()"
-            [src]="currentLang === 'en' ? './assets/images/german.png' : './assets/images/english.png'" alt="">
-            <img (click)="menu()" class="mobile-menu" src="./assets/images/burger.png" alt="" #menuIcon>
-        <div class="nav-bar-links">
-            <a href="#about_me" (click)="navigateTo($event, 'about_me')">{{ 'header.about' | translate }}</a>
-            <a href="#my_skills" (click)="navigateTo($event, 'my_skills')">{{ 'header.skills' | translate }}</a>
-            <a href="#portfolio" (click)="navigateTo($event, 'portfolio')">{{ 'header.portfolio' | translate }}</a>
-        </div>
+  <a href="/"><img src="./assets/images/logo-dark.png" alt="" /></a>
+  <div class="nav-bar">
+    <img
+      (click)="switchLanguage()"
+      [src]="
+        currentLang === 'en'
+          ? './assets/images/english.png'
+          : './assets/images/german.png'
+      "
+      alt=""
+    />
+    <img
+      (click)="menu()"
+      class="mobile-menu"
+      src="./assets/images/burger.png"
+      alt=""
+      #menuIcon
+    />
+    <div class="nav-bar-links">
+      <a href="#about_me" (click)="navigateTo($event, 'about_me')">{{
+        "header.about" | translate
+      }}</a>
+      <a href="#my_skills" (click)="navigateTo($event, 'my_skills')">{{
+        "header.skills" | translate
+      }}</a>
+      <a href="#portfolio" (click)="navigateTo($event, 'portfolio')">{{
+        "header.portfolio" | translate
+      }}</a>
     </div>
-    <div class="menu" #openedMenu>
-        <a class="link" (click)="closed()" href="#about_me">{{ 'header.about' | translate }}</a>
-        <a class="link" (click)="closed()" href="#my_skills">{{ 'header.skills' | translate }}</a>
-        <a class="link" (click)="closed()" href="#portfolio">{{ 'header.portfolio' | translate }}</a>
-        <a class="link" (click)="closed()" href="#contact">{{ 'header.contact' | translate }}</a>
-    </div>
+  </div>
+  <div class="menu" #openedMenu>
+    <a class="link" (click)="closed()" href="#about_me">{{
+      "header.about" | translate
+    }}</a>
+    <a class="link" (click)="closed()" href="#my_skills">{{
+      "header.skills" | translate
+    }}</a>
+    <a class="link" (click)="closed()" href="#portfolio">{{
+      "header.portfolio" | translate
+    }}</a>
+    <a class="link" (click)="closed()" href="#contact">{{
+      "header.contact" | translate
+    }}</a>
+  </div>
 </header>
