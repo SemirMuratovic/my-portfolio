@@ -9,8 +9,7 @@
   align-items: center;
   overflow: hidden;
   @media screen and (max-width: 980px) {
-    gap: 80px;
-    padding: 140px 40px;
+    padding: 100px 40px;
     justify-content: flex-start;
   }
 }
@@ -230,7 +229,7 @@
   }
 }
 
-.button-wrapper{
+.button-wrapper {
   position: relative;
   display: flex;
   justify-content: center;
@@ -251,12 +250,11 @@
   right: 32px;
   &:hover {
     cursor: pointer;
-    rect{
+    rect {
       stroke: $prim1;
     }
-    path{
+    path {
       fill: $prim1;
     }
   }
 }
-
