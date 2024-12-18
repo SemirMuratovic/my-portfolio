@@ -1,81 +1,155 @@
 <div id="contact" class="contact">
   <div class="headline">
-    <h1>{{'contact.title' | translate}}</h1>
+    <h1>{{ "contact.title" | translate }}</h1>
   </div>
   <div class="form-wrapper">
     <div class="text" data-aos="zoom-in-right" data-aos-duration="1600">
-      <h3>{{'contact.section-1' | translate}}</h3>
+      <h3>{{ "contact.section-1" | translate }}</h3>
       <span>
         <p>
-          {{'contact.section-2' | translate}}
+          {{ "contact.section-2" | translate }}
         </p>
       </span>
       <span>
-        <p>{{'contact.section-3' | translate}} <b>{{'contact.section-4' | translate}}</b></p>
+        <p>
+          {{ "contact.section-3" | translate }}
+          <b>{{ "contact.section-4" | translate }}</b>
+        </p>
       </span>
     </div>
     <div class="form-section" data-aos="zoom-in-left" data-aos-duration="1600">
       <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-        <div [ngClass]="{
-          'input-wrapper-good': name.valid,
-          'input-wrapper-bad': name.invalid && (name.touched || submitted)
-        }">
-          <input class="input-text" type="text" #name="ngModel" [(ngModel)]="contactData.name" name="name" required
-            placeholder="{{'contact.name-field' | translate}}" [ngClass]="{
+        <div
+          [ngClass]="{
+            'input-wrapper-good': name.valid,
+            'input-wrapper-bad': name.invalid && (name.touched || submitted)
+          }"
+        >
+          <input
+            autocomplete="off"
+            class="input-text"
+            type="text"
+            #name="ngModel"
+            [(ngModel)]="contactData.name"
+            name="name"
+            required
+            placeholder="{{ 'contact.name-field' | translate }}"
+            [ngClass]="{
               'form-margin': !(name.invalid && (name.touched || submitted))
-            }" />
+            }"
+          />
         </div>
-        <span *ngIf="name.invalid && (name.touched || submitted)">{{'contact.errors.name' | translate}}</span>
-        <div [ngClass]="{
-          'input-wrapper-good': eMail.valid,
-          'input-wrapper-bad': eMail.invalid && (eMail.touched || submitted)
-        }">
-          <input class="input-text" type="email" #eMail="ngModel" [(ngModel)]="contactData.email" name="email" required
-            placeholder="{{'contact.e-mail-field' | translate}}"
-            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" [ngClass]="{
+        <span *ngIf="name.invalid && (name.touched || submitted)">{{
+          "contact.errors.name" | translate
+        }}</span>
+        <div
+          [ngClass]="{
+            'input-wrapper-good': eMail.valid,
+            'input-wrapper-bad': eMail.invalid && (eMail.touched || submitted)
+          }"
+        >
+          <input
+            autocomplete="off"
+            class="input-text"
+            type="email"
+            #eMail="ngModel"
+            [(ngModel)]="contactData.email"
+            name="email"
+            required
+            placeholder="{{ 'contact.e-mail-field' | translate }}"
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+            [ngClass]="{
               'form-margin': !(eMail.invalid && (eMail.touched || submitted))
-            }" />
+            }"
+          />
         </div>
-        <span *ngIf="eMail.invalid && (eMail.touched || submitted)">{{'contact.errors.email' | translate}}</span>
-        <div [ngClass]="{
-          'input-wrapper-good': message.valid,
-          'input-wrapper-bad': message.invalid && (message.touched || submitted)
-        }">
-          <textarea #message="ngModel" type="text" [(ngModel)]="contactData.message" name="message"
-            placeholder="{{'contact.message-field' | translate}}" required [ngClass]="{
+        <span *ngIf="eMail.invalid && (eMail.touched || submitted)">{{
+          "contact.errors.email" | translate
+        }}</span>
+        <div
+          [ngClass]="{
+            'input-wrapper-good': message.valid,
+            'input-wrapper-bad':
+              message.invalid && (message.touched || submitted)
+          }"
+        >
+          <textarea
+            #message="ngModel"
+            type="text"
+            [(ngModel)]="contactData.message"
+            name="message"
+            placeholder="{{ 'contact.message-field' | translate }}"
+            required
+            [ngClass]="{
               'form-margin': !(
                 message.invalid &&
                 (message.touched || submitted)
               )
-            }"></textarea>
+            }"
+          ></textarea>
         </div>
-        <span *ngIf="message.invalid && (message.touched || submitted)">{{'contact.errors.message' | translate}}</span>
+        <span *ngIf="message.invalid && (message.touched || submitted)">{{
+          "contact.errors.message" | translate
+        }}</span>
         <div class="privacy-policy">
           <div class="check-box-wrapper">
-            <input #checkbox="ngModel" (ngModelChange)="onPolicyChange($event)" [(ngModel)]="policyAccepted"
-              type="checkbox" name="privacy" class="checkbox" required />
+            <input
+              #checkbox="ngModel"
+              (ngModelChange)="onPolicyChange($event)"
+              [(ngModel)]="policyAccepted"
+              type="checkbox"
+              name="privacy"
+              class="checkbox"
+              required
+            />
           </div>
-          <label for="accept_policy">{{'contact.checkbox.section-1' | translate}} <a
-              href="privacy-policy">{{'contact.checkbox.section-2' | translate}}</a> {{'contact.checkbox.section-3' |
-            translate}}</label>
+          <label for="accept_policy"
+            >{{ "contact.checkbox.section-1" | translate }}
+            <a href="privacy-policy">{{
+              "contact.checkbox.section-2" | translate
+            }}</a>
+            {{ "contact.checkbox.section-3" | translate }}</label
+          >
         </div>
-        <span *ngIf="showPrivacyError || (!policyAccepted && submitted)">{{'contact.errors.privacy-policy' |
-          translate}}</span>
+        <span *ngIf="showPrivacyError || (!policyAccepted && submitted)">{{
+          "contact.errors.privacy-policy" | translate
+        }}</span>
         <div class="button-wrapper">
-          <input class="btn-prim" type="submit" value="{{'contact.submit-button' | translate}}" [ngClass]="{
-            'btn-disabled': !contactForm.form.valid || !policyAccepted
-          }" />
+          <input
+            class="btn-prim"
+            type="submit"
+            value="{{ 'contact.submit-button' | translate }}"
+            [ngClass]="{
+              'btn-disabled': !contactForm.form.valid || !policyAccepted
+            }"
+          />
           <div class="mail-sent-info" *ngIf="mailSent">
-            <p>{{'contact.email-sent' | translate}}</p>
+            <p>{{ "contact.email-sent" | translate }}</p>
           </div>
         </div>
       </form>
       <a href="#">
-        <svg class="up-btn" width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="1" y="1" width="37" height="37" rx="18.5" stroke="white" stroke-width="2" />
+        <svg
+          class="up-btn"
+          width="39"
+          height="39"
+          viewBox="0 0 39 39"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="1"
+            y="1"
+            width="37"
+            height="37"
+            rx="18.5"
+            stroke="white"
+            stroke-width="2"
+          />
           <path
             d="M18 15.828L13.343 20.485C12.9526 20.8755 12.3195 20.8755 11.929 20.485C11.5386 20.0945 11.5386 19.4615 11.929 19.071L18.2929 12.7071C18.6834 12.3166 19.3166 12.3166 19.7071 12.7071L26.071 19.071C26.4615 19.4615 26.4615 20.0945 26.071 20.485C25.6806 20.8755 25.0475 20.8755 24.657 20.485L20 15.828L20 27C20 27.5523 19.5523 28 19 28C18.4477 28 18 27.5523 18 27L18 15.828Z"
-            fill="white" />
+            fill="white"
+          />
         </svg>
       </a>
     </div>
