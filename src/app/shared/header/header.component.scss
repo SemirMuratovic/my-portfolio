@@ -73,6 +73,7 @@ header {
   }
   img {
     height: 32px;
+    width: 60px;
     @media (hover: hover) and (pointer: fine) {
       &:hover {
         scale: 1.2;
