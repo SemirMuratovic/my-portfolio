@@ -71,9 +71,11 @@ header {
       display: none;
     }
   }
+  .language {
+    width: 60px;
+  }
   img {
     height: 32px;
-    width: 60px;
     @media (hover: hover) and (pointer: fine) {
       &:hover {
         scale: 1.2;
