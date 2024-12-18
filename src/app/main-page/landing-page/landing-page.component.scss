@@ -165,7 +165,8 @@ h2 {
   margin: 0 auto;
   bottom: 15%;
   right: 32px;
-  rotate: 90deg;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
   color: white;
   font-size: 24px;
   animation: pulse 2s infinite;
