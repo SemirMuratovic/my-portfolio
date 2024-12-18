@@ -73,6 +73,12 @@ header {
       scale: 1.2;
       cursor: pointer;
     }
+    @media screen and (max-width: 980px) {
+      &:hover {
+        scale: 1;
+        cursor: pointer;
+      }
+    }
   }
   .mobile-menu {
     @media screen and (min-width: 980px) {
@@ -101,16 +107,16 @@ header {
   overflow-y: hidden;
 
   .button {
-      font-weight: 300;
-      font-size: 17px;
-      color: #FFFFFF;
-      background-color: #141D2F;
-      border: none;
+    font-weight: 300;
+    font-size: 17px;
+    color: #ffffff;
+    background-color: #141d2f;
+    border: none;
 
-      &:hover {
-          cursor: pointer;
-          color: #70E61C;
-      }
+    &:hover {
+      cursor: pointer;
+      color: #70e61c;
+    }
   }
 }
 
@@ -119,22 +125,22 @@ header {
 }
 
 .link {
-  font-size: 18px;
+  font-size: 24px;
   color: white;
   text-decoration: none;
 
   &:hover {
-      cursor: pointer;
-      color: #70E61C;
+    cursor: pointer;
+    color: #70e61c;
   }
 }
 
 @keyframes slideIn {
   from {
-      transform: translateX(100%);
+    transform: translateX(100%);
   }
 
   to {
-      transform: translateX(0);
+    transform: translateX(0);
   }
 }
