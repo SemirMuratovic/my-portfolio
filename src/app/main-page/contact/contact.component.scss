@@ -183,13 +183,15 @@
   align-items: center;
   border-radius: 50%;
   position: relative;
-  &:hover {
-    cursor: pointer;
-    background-color: #183771;
-  }
-  &:hover .checkbox {
-    cursor: pointer;
-    background-color: #183771;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      cursor: pointer;
+      background-color: #183771;
+    }
+    &:hover .checkbox {
+      cursor: pointer;
+      background-color: #183771;
+    }
   }
   .checkbox {
     appearance: none;
@@ -219,9 +221,11 @@
   a {
     color: $prim2;
     text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-      text-decoration-thickness: 0.5px;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 0.5px;
+      }
     }
   }
   label {
@@ -248,13 +252,15 @@
   position: fixed;
   bottom: -60px;
   right: 32px;
-  &:hover {
-    cursor: pointer;
-    rect {
-      stroke: $prim1;
-    }
-    path {
-      fill: $prim1;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      cursor: pointer;
+      rect {
+        stroke: $prim1;
+      }
+      path {
+        fill: $prim1;
+      }
     }
   }
 }

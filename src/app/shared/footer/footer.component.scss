@@ -23,7 +23,7 @@ footer {
     gap: 24px;
   }
   @media screen and (max-width: 520px) {
-    padding:40px;
+    padding: 40px;
   }
 }
 
@@ -35,9 +35,11 @@ footer {
     color: white;
     img {
       height: 80px;
-      &:hover {
-        cursor: pointer;
-        filter: drop-shadow(0px 0px 2px $prim1);
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          cursor: pointer;
+          filter: drop-shadow(0px 0px 2px $prim1);
+        }
       }
     }
   }
@@ -66,10 +68,12 @@ footer {
     transform-origin: top left;
     transition: transform 0.3s ease;
   }
-  &:hover::before {
-    transform: scaleX(1);
-    color: $prim1;
-    visibility: visible;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover::before {
+      transform: scaleX(1);
+      color: $prim1;
+      visibility: visible;
+    }
   }
 }
 
@@ -85,8 +89,10 @@ footer {
 .social-image {
   transition: transform 0.1s ease;
   transform-origin: right center;
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.4);
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.4);
+    }
   }
 }

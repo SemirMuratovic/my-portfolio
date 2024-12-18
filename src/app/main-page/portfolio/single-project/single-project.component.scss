@@ -46,10 +46,12 @@
     background-color: $prim2;
     transition: unset;
     transform-origin: unset;
-    &:hover {
-      background-color: $prim1;
-      cursor: pointer;
-      transform: unset;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: $prim1;
+        cursor: pointer;
+        transform: unset;
+      }
     }
   }
   @media screen and (max-width: 980px) {

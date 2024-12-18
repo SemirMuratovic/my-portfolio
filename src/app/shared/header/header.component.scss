@@ -14,9 +14,11 @@ header {
   > a > img {
     height: 50px;
     width: 100px;
-    &:hover {
-      cursor: pointer;
-      filter: drop-shadow(0px 0px 2px $prim1);
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        cursor: pointer;
+        filter: drop-shadow(0px 0px 2px $prim1);
+      }
     }
   }
   @media screen and (max-width: 520px) {
@@ -41,8 +43,10 @@ header {
         visibility: visible;
         outline: none;
       }
-      &:hover {
-        color: $prim1;
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          color: $prim1;
+        }
       }
       &::before {
         content: "";
@@ -69,13 +73,9 @@ header {
   }
   img {
     height: 32px;
-    &:hover {
-      scale: 1.2;
-      cursor: pointer;
-    }
-    @media screen and (max-width: 980px) {
+    @media (hover: hover) and (pointer: fine) {
       &:hover {
-        scale: 1;
+        scale: 1.2;
         cursor: pointer;
       }
     }
@@ -112,10 +112,11 @@ header {
     color: #ffffff;
     background-color: #141d2f;
     border: none;
-
-    &:hover {
-      cursor: pointer;
-      color: #70e61c;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        cursor: pointer;
+        color: #70e61c;
+      }
     }
   }
 }
@@ -128,10 +129,11 @@ header {
   font-size: 24px;
   color: white;
   text-decoration: none;
-
-  &:hover {
-    cursor: pointer;
-    color: #70e61c;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      cursor: pointer;
+      color: #70e61c;
+    }
   }
 }
 

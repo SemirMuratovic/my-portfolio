@@ -99,10 +99,12 @@ h4 {
   transition: transform 0.1s ease;
   transform-origin: top center;
   text-decoration: none;
-  &:hover {
-    background-color: $prim2;
-    cursor: pointer;
-    transform: scale(1.2);
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: $prim2;
+      cursor: pointer;
+      transform: scale(1.2);
+    }
   }
   @media screen and (max-width: 520px) {
     font-size: 18px;
@@ -119,9 +121,11 @@ h4 {
   border-radius: 10px;
   border: 1px solid $prim1;
   text-decoration: none;
-  &:hover {
-    background-color: $prim1;
-    cursor: pointer;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: $prim1;
+      cursor: pointer;
+    }
   }
   @media screen and (max-width: 520px) {
     font-size: 18px;

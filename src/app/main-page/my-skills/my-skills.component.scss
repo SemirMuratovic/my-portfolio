@@ -87,11 +87,13 @@ section {
       fill: $prim2;
     }
   }
-  &:hover {
-    color: white;
-    > svg {
-      path {
-        fill: white;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: white;
+      > svg {
+        path {
+          fill: white;
+        }
       }
     }
   }
@@ -104,9 +106,11 @@ section {
 }
 
 .fall-effect {
-  &:hover {
-    > img {
-      animation: fall 0.5s ease-out;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      > img {
+        animation: fall 0.5s ease-out;
+      }
     }
   }
   @keyframes fall {

@@ -46,7 +46,6 @@ section {
   }
 }
 
-
 h1 {
   font-size: 7vw;
   font-weight: 700;
@@ -150,9 +149,11 @@ h2 {
 .social-image {
   transition: transform 0.1s ease;
   transform-origin: left center;
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.4);
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.4);
+    }
   }
 }
 
