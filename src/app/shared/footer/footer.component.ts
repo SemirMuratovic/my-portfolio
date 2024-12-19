@@ -1,33 +1,32 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { TranslateModule, TranslateService } from '@ngx-translate/core'
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
   imports: [CommonModule, TranslateModule],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  styleUrl: './footer.component.scss',
 })
-export class FooterComponent {  
+export class FooterComponent {
   social = [
     {
       image: 'github',
       link: 'https://github.com/SemirMuratovic',
-      target: '_blank'
+      target: '_blank',
     },
     {
       image: 'email',
       link: '#contact',
-      target: '_self'
+      target: '_self',
     },
     {
       image: 'linkedin',
-      link: 'https://de.linkedin.com/',
-      target: '_blank'
+      link: 'https://www.linkedin.com/in/semir-muratovic-06475432a/',
+      target: '_blank',
     },
   ];
 
-  constructor(private translate: TranslateService){}
-
+  constructor(private translate: TranslateService) {}
 }

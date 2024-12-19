@@ -9,25 +9,24 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss',
 })
-export class LandingPageComponent{
+export class LandingPageComponent {
   social = [
     {
       image: 'github',
       link: 'https://github.com/SemirMuratovic',
-      target: '_blank'
+      target: '_blank',
     },
     {
       image: 'email',
       link: '#contact',
-      target: '_self'
+      target: '_self',
     },
     {
       image: 'linkedin',
-      link: 'https://de.linkedin.com/',
-      target: '_blank'
+      link: 'https://www.linkedin.com/in/semir-muratovic-06475432a/',
+      target: '_blank',
     },
   ];
 
   constructor(private translate: TranslateService) {}
-
 }
