@@ -46,34 +46,27 @@ p {
 }
 
 h1 {
-  font-size: 7vw;
+  font-size: max(3.5vw, 45px);
   font-weight: 700;
   color: white;
-  line-height: 7.5vw;
-  @media screen and (min-width: 1400px) {
+  line-height: max(4vw, 50px);
+  word-wrap: break-word;
+  @media screen and (min-width: 3000px) {
     font-size: 90px;
     line-height: 106px;
-  }
-  @media screen and (max-width: 520px) {
-    font-size: 45px;
-    line-height: 50px;
-    word-wrap: break-word;
   }
 }
 
 h2 {
-  font-size: 5.3vw;
+  font-size: max(3vw, 36px);
   font-weight: 400;
   color: $prim2;
-  line-height: 6vw;
-  @media screen and (min-width: 1400px) {
+  line-height: max(3.5vw, 42px);
+  word-wrap: break-word;
+
+  @media screen and (min-width: 3000px) {
     font-size: 72px;
     line-height: 80px;
-  }
-  @media screen and (max-width: 520px) {
-    font-size: 36px;
-    line-height: 42px;
-    word-wrap: break-word;
   }
 }
 
