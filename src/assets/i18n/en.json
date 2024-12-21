@@ -34,7 +34,8 @@
     "section": "Check out some of my work here - interact with the projects to experience my skills firsthand.",
     "project-1": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
     "project-2": "A simple Jump N Run Game based on object oriented Programming. Help Pepe to collect coins and fight against chickens.",
-    "project-3": "PokeAPI-powered Pokemon-Database to get all the information you need about your favorite little monsters!"
+    "project-3": "PokeAPI-powered Pokemon-Database to get all the information you need about your favorite little monsters!",
+    "project-4": "A chat platform similar to Slack that simplifies communication between users. Log in to send messages or files."
   },
   "contact": {
     "title": "Contact",
@@ -80,8 +81,6 @@
       "content-7": "Provision of the Online Offering and Web Hosting",
       "content-8": "Contact and Inquiry Management"
     },
-    "controller": {
-      
-    }
+    "controller": {}
   }
 }

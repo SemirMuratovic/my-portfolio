@@ -31,12 +31,12 @@ export class PortfolioComponent {
   loadTranslatedInfo() {
     this.myProjects = [
       {
-        projectImage: 'laptop-join.png',
-        projectName: 'Join',
-        skills: ['HTML', 'CSS', 'JavaScript'],
-        description: this.translate.instant('portfolio.project-1'),
-        liveTestLink: 'https://join.semir-muratovic.de/index.html',
-        gitHubLink: 'https://github.com/SemirMuratovic/Join',
+        projectImage: 'laptop-dabubble.png',
+        projectName: 'DABubble',
+        skills: ['Angular', 'Material', 'TypeScript'],
+        description: this.translate.instant('portfolio.project-4'),
+        liveTestLink: 'https://dabubble.semir-muratovic.de/index.html',
+        gitHubLink: 'https://github.com/SemirMuratovic/DABubble',
       },
       {
         projectImage: 'laptop-el-pollo-loco.png',
@@ -47,13 +47,21 @@ export class PortfolioComponent {
         gitHubLink: 'https://github.com/SemirMuratovic/El-Polo-loco',
       },
       {
-        projectImage: 'laptop-pokedex.png',
-        projectName: 'Pokédex',
-        skills: ['HTML', 'CSS', 'JavaScript', 'API'],
-        description: this.translate.instant('portfolio.project-3'),
-        liveTestLink: 'https://pokedex.semir-muratovic.de/index.html',
-        gitHubLink: 'https://github.com/SemirMuratovic/Pokedex',
+        projectImage: 'laptop-join.png',
+        projectName: 'Join',
+        skills: ['HTML', 'CSS', 'JavaScript'],
+        description: this.translate.instant('portfolio.project-1'),
+        liveTestLink: 'https://join.semir-muratovic.de/index.html',
+        gitHubLink: 'https://github.com/SemirMuratovic/Join',
       },
+      // {
+      //   projectImage: 'laptop-pokedex.png',
+      //   projectName: 'Pokédex',
+      //   skills: ['HTML', 'CSS', 'JavaScript', 'API'],
+      //   description: this.translate.instant('portfolio.project-3'),
+      //   liveTestLink: 'https://pokedex.semir-muratovic.de/index.html',
+      //   gitHubLink: 'https://github.com/SemirMuratovic/Pokedex',
+      // },
     ];
   }
 }

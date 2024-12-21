@@ -34,7 +34,8 @@
     "section": "Sehen Sie sich hier eine Auswahl meiner Arbeiten an – interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu erleben.",
     "project-1": "Aufgabenmanager nach dem Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionalität und weisen Sie Benutzer und Kategorien zu.",
     "project-2": "Ein einfaches Jump-and-Run-Spiel, das auf objektorientierter Programmierung basiert. Hilf Pepe, Münzen zu sammeln und gegen Hühner zu kämpfen.",
-    "project-3": "Eine von der PokeAPI unterstützte Pokémon-Datenbank, um alle Informationen über Ihre Lieblingsmonster zu erhalten!"
+    "project-3": "Eine von der PokeAPI unterstützte Pokémon-Datenbank, um alle Informationen über Ihre Lieblingsmonster zu erhalten!",
+    "project-4": "Eine Chatplatform im Form von Slack, die die Kommunikation zwischen Nutzern vereinfacht. Lassen Sie sich einloggen, um Nachrichten oder Dateien zu senden."
   },
   "contact": {
     "title": "Kontakt",
